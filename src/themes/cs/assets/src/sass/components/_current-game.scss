@@ -1,0 +1,143 @@
+.current-game__content {
+	position: absolute;
+	top: 57%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: 2;
+
+	@include lg {
+		top: 55%;
+	}
+}
+
+.current-game__img {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	filter: grayscale(100%);
+	object-fit: cover;
+	object-position: center;
+}
+
+.current-game__icon-wrapper {
+	width: 76px;
+	height: 76px;
+	background: linear-gradient(112.59deg, #222a33 7.38%, #2f3843 206.45%);
+	box-shadow: 0px 25px 40px -10px rgba(0, 0, 0, 0.4);
+	border-radius: 8px;
+	padding: 15px;
+	display: grid;
+	place-items: center;
+	border: 1px solid #2f3843;
+	position: relative;
+	overflow: hidden;
+
+	@include lg {
+		width: 134px;
+		height: 134px;
+		border-radius: 16px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		background: #16bdf9;
+		width: 3px;
+
+		@include lg {
+			width: 5px;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+	}
+}
+
+.current-game__icon-wrapper--reversed {
+	&::after {
+		left: 0;
+		right: auto;
+	}
+}
+
+.current-game__info {
+	text-align: center;
+	padding: 0 27px;
+	flex-shrink: 0;
+
+	@include lg {
+		padding: 0 53px;
+		margin-top: 25px;
+	}
+}
+
+.current-game__day {
+	color: #ffffff;
+	margin: 15px 0;
+
+	@include lg {
+		margin: 11px 0;
+	}
+}
+
+.current-game__hour {
+	color: #becde3;
+	font-size: 1.4rem;
+}
+
+.current-game__team-wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column-reverse;
+
+	@include lg {
+		flex-direction: row;
+	}
+}
+
+.current-game__team-name-wrapper {
+	@include lg {
+		padding: 32px 95px;
+		background: linear-gradient(
+			269.74deg,
+			#252d37 10.7%,
+			rgba(37, 45, 55, 0) 79.67%
+		);
+	}
+}
+
+.current-game__team-name-wrapper--reversed {
+	@include lg {
+		background: linear-gradient(
+			269.74deg,
+			rgba(37, 45, 55, 0) 10.7%,
+			#252d37 79.67%
+		);
+	}
+}
+
+.current-game__team-name {
+	color: #fff;
+	font-size: 1.2rem;
+	margin-top: 10px;
+
+	@include lg {
+		font-size: 2.1rem;
+		margin-top: 0;
+	}
+}
+
+.current-game__btn {
+	padding: 9px 24px;
+	margin-top: 50px;
+
+	@include lg {
+		margin-top: 25px;
+	}
+}

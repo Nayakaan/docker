@@ -1,0 +1,21 @@
+.footer-menu {
+	display: flex;
+	flex-direction: column;
+	padding-right: 25px;
+	padding-bottom: 25px;
+
+	@include md {
+		padding-bottom: 0;
+	}
+
+	@include lg {
+		padding-top: 0;
+	}
+}
+
+.footer-menu__link {
+	color: #6c829d;
+	display: block;
+	font-size: 1.3rem;
+	padding: 6px 0 5px;
+}

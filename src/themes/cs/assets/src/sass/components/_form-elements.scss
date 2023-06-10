@@ -1,0 +1,75 @@
+.form-select-wrapper {
+	.select2-selection {
+		background: #222a33;
+		border-radius: 8px;
+		border: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding-right: 1rem;
+		background-repeat: no-repeat;
+		background-position: right center;
+		cursor: pointer;
+		height: 42px;
+
+		.select2-selection__rendered {
+			padding: 0 10px;
+			font-size: 1.4rem;
+			height: 42px;
+			line-height: 42px;
+			color: #fff;
+		}
+	}
+
+	.select2-selection__arrow {
+		display: none;
+	}
+}
+
+.select2-container {
+	.select2-dropdown {
+		border: 0;
+	}
+
+	.select2-results__option {
+		background: #222a33;
+		color: #fff;
+	}
+}
+
+.form-select {
+	color: #fff;
+	background: #222a33;
+	border-radius: 8px;
+	border: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding-right: 1rem;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding: 13px 10px;
+	font-size: 1.4rem;
+	cursor: pointer;
+
+	option {
+		background: #222a33;
+		color: #fff;
+	}
+}
+
+.form-select--medium {
+	min-width: 145px;
+
+	@include lg {
+		min-width: 200px;
+	}
+}
+
+.form-select--large {
+	min-width: 180px;
+
+	@include lg {
+		min-width: 200px;
+	}
+}

@@ -1,0 +1,195 @@
+.promotions-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-top: 15px;
+	padding-bottom: 50px;
+}
+
+.teams-cards-wrapper {
+	padding-bottom: 60px;
+}
+
+.logos-list-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 22px;
+}
+
+.teams-top-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 0;
+
+	@include lg {
+		padding: 40px 0 12px;
+	}
+}
+
+.buttons-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #222a33;
+	box-shadow: 0px 25px 40px -10px rgba(0, 0, 0, 0.4);
+	border-radius: 90px;
+	padding: 5px;
+	max-width: 335px;
+	margin: 0 auto;
+}
+
+.current-game-wrapper {
+	min-height: 272px;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 327px;
+		left: 50%;
+		transform: translateX(-50%) skewX(-12deg);
+		background: linear-gradient(
+			178.3deg,
+			#0a0e18 -5.72%,
+			#1a212b 67.57%,
+			#0a0e18 133.61%
+		);
+		border: 1px solid #1a212b;
+	}
+}
+
+.current-game__team-wrapper--reversed {
+	@include lg {
+		flex-direction: row-reverse;
+	}
+}
+
+.deposit-wrapper {
+	padding: 36px 0;
+	max-width: 1060px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@include lg {
+		padding: 60px 0;
+	}
+}
+
+.coming-up-wrapper {
+	background: linear-gradient(104.08deg, #222a33 41.42%, #2b343e 107.95%);
+	border-radius: 16px;
+	margin: 50px 0 0;
+	position: relative;
+
+	@include lg {
+		margin: 150px 0 0;
+	}
+}
+
+.coming-up-wrapper::before {
+	content: '';
+	position: absolute;
+	top: -22px;
+	left: 50%;
+	width: 270px;
+	height: 188px;
+	background: #1a212b;
+	transform: skewX(-8deg) translateX(-50%);
+	border: 1px solid #30373f;
+
+	@include lg {
+		width: 414px;
+		transform: skewX(-12deg) translateX(-50%);
+		height: 175px;
+	}
+}
+
+.date-bar-wrapper {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.form-select-wrapper {
+	position: relative;
+	display: inline-block;
+
+	&::after {
+		content: url("data:image/svg+xml,%0A%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.478925 0.813886C0.525371 0.767322 0.580546 0.730379 0.641291 0.705173C0.702037 0.679967 0.767158 0.666992 0.832925 0.666992C0.898692 0.666992 0.963814 0.679967 1.02456 0.705173C1.0853 0.730379 1.14048 0.767322 1.18693 0.813886L6.83292 6.46089L12.4789 0.813886C12.5254 0.767398 12.5806 0.730521 12.6413 0.705362C12.7021 0.680203 12.7672 0.667254 12.8329 0.667254C12.8987 0.667254 12.9638 0.680203 13.0245 0.705362C13.0852 0.730521 13.1404 0.767398 13.1869 0.813886C13.2334 0.860374 13.2703 0.915563 13.2954 0.976302C13.3206 1.03704 13.3336 1.10214 13.3336 1.16789C13.3336 1.23363 13.3206 1.29873 13.2954 1.35947C13.2703 1.42021 13.2334 1.4754 13.1869 1.52189L7.18692 7.52189C7.14048 7.56845 7.0853 7.60539 7.02456 7.6306C6.96381 7.65581 6.89869 7.66878 6.83292 7.66878C6.76716 7.66878 6.70204 7.65581 6.64129 7.6306C6.58055 7.60539 6.52537 7.56845 6.47892 7.52189L0.478925 1.52189C0.432362 1.47544 0.395419 1.42026 0.370213 1.35952C0.345006 1.29877 0.332031 1.23365 0.332031 1.16789C0.332031 1.10212 0.345006 1.037 0.370213 0.976252C0.395419 0.915507 0.432362 0.860331 0.478925 0.813886Z' fill='white'/%3E%3C/svg%3E%0A");
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		z-index: 10;
+	}
+}
+
+.standings-tabs-wrapper {
+	padding-right: 0;
+
+	@include lg {
+		padding-right: 20px;
+	}
+}
+
+.standings-team-wrapper {
+	padding: 5px 0 36px;
+	overflow-x: scroll;
+
+	@include lg {
+		padding: 5px 0 70px;
+		overflow-x: auto;
+	}
+}
+
+.standings-team-sort-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 34px;
+	padding-right: 20px;
+
+	@include lg {
+		padding-right: 0;
+	}
+}
+
+.standings-team-buttons-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.schedule-items-wrapper {
+	padding: 15px 0;
+
+	@include lg {
+		padding: 37px 0 50px;
+	}
+}
+
+.match-bet-dropdown-wrapper {
+	display: none;
+
+	&.visible {
+		display: block;
+		grid-column: 1/-1;
+		margin-top: 10px;
+	}
+
+	@include lg {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+.curent-game-bets-wrapper {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.standings-page-wrapper {
+	padding-top: 20px;
+	padding-bottom: 0;
+}

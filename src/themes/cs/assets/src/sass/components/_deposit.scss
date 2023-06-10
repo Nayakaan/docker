@@ -1,0 +1,64 @@
+.deposit {
+	position: relative;
+	min-height: 227px;
+	padding: 20px;
+
+	@include lg {
+		min-height: 363px;
+		padding: 30px 80px 40px;
+	}
+}
+
+.deposit__img {
+	height: 227px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	@include lg {
+		height: 363px;
+		border-radius: 22px;
+	}
+}
+
+.deposit__content {
+	position: relative;
+	z-index: 2;
+}
+
+.deposit__top {
+	color: #16bdf9;
+	font-size: 5rem;
+
+	@include lg {
+		font-size: 10rem;
+	}
+}
+
+.deposit__text {
+	color: #fff;
+	font-size: 2.7rem;
+	margin-bottom: 20px;
+
+	@include lg {
+		font-size: 4.9rem;
+		margin-bottom: 30px;
+	}
+
+	span {
+		color: #16bdf9;
+	}
+}
+
+.deposit__btn {
+	padding: 10px 20px;
+
+	@include lg {
+		padding: 13px 29px;
+	}
+}

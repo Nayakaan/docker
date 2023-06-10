@@ -1,0 +1,249 @@
+.match-bet {
+	color: #fff;
+	background: radial-gradient(70.2% 618.6% at 51.37% 31.43%,
+			rgba(56, 65, 75, 0.16) 0%,
+			rgba(43, 52, 62, 0) 100%)
+		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+		,
+		#1a212b;
+	border-radius: 8px;
+	margin: 10px 0;
+	padding: 5px 25px 0 8px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	border: 1px solid #38414b;
+	position: relative;
+
+	&.active {
+		background: radial-gradient(70.2% 618.6% at 51.37% 31.43%,
+				rgba(56, 65, 75, 0.16) 0%,
+				rgba(43, 52, 62, 0) 100%)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+			,
+			radial-gradient(70.2% 618.6% at 51.37% 31.43%,
+				rgba(56, 65, 75, 0.16) 0%,
+				rgba(43, 52, 62, 0) 100%)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+		;
+
+
+		.match-bet__btn {
+			&::after {
+				width: 3px;
+				transform: rotate(180deg) translate(-50%, -50%);
+			}
+		}
+	}
+
+	@include lg {
+		grid-template-columns: 1fr 210px 1fr;
+		padding: 5px 0;
+	}
+}
+
+.match-bet__top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include lg {
+		grid-column: 2/3;
+		flex-direction: column;
+	}
+}
+
+.match-bet__hour {
+	font-size: 1.4rem;
+	margin-left: 12px;
+
+	@include lg {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
+
+.match-bet__team {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+
+	@include lg {
+		padding: 0;
+	}
+}
+
+.match-bet__team--first {
+	@include lg {
+		justify-content: flex-end;
+		grid-row: 1/2;
+		grid-column: 1/2;
+	}
+}
+
+.match-bet__team--first .match-bet__icon-wrapper {
+	@include lg {
+		order: 1;
+		margin: 0 36px 0 26px;
+	}
+}
+
+.match-bet__team--first .match-bet__value {
+	@include lg {
+		order: 2;
+		margin: 0;
+	}
+}
+
+.match-bet__team--second {
+	@include lg {
+		grid-row: 1/2;
+		grid-column: 3/4;
+	}
+}
+
+.match-bet__team--second .match-bet__icon-wrapper {
+	@include lg {
+		margin: 0 26px 0 36px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			right: auto;
+			background: #16bdf9;
+			width: 2px;
+
+			@include lg {
+				width: 3px;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+			}
+		}
+	}
+}
+
+.match-bet__team--second .match-bet__value {
+	@include lg {
+		order: -1;
+		margin: 0;
+	}
+}
+
+.match-bet__team-name {
+	margin-left: 20px;
+
+	@include lg {
+		margin: 0;
+	}
+}
+
+.match-bet__icon-wrapper {
+	width: 30px;
+	height: 30px;
+	background: linear-gradient(101.13deg, #222a33 0.48%, #0a0e18 147.55%);
+	box-shadow: 0px 25px 40px -10px rgba(0, 0, 0, 0.4);
+	border-radius: 8px;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+
+	@include lg {
+		width: 54px;
+		height: 54px;
+		padding: 9px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		background: #16bdf9;
+		width: 2px;
+
+		@include lg {
+			width: 3px;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+	}
+}
+
+.match-bet__value {
+	background-color: #0d121b;
+	border-radius: 3px;
+	padding: 8px 0;
+	margin-left: auto;
+	font-size: 1.2rem;
+	border-radius: 6px;
+	width: 54px;
+	text-align: center;
+
+	@include lg {
+		padding: 10px 0;
+		font-size: 1.4rem;
+		width: 67px;
+	}
+}
+
+.match-bet__btn {
+	position: absolute;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 16px;
+	background: #303b47;
+	border: 0;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transition: color 300ms ease-in-out, border 300ms ease-in-out;
+
+	&:hover {
+		@include lg {
+			border: 2px solid #fff;
+			color: #fff;
+		}
+	}
+
+	@include lg {
+		right: 20px;
+		top: 15px;
+		bottom: auto;
+		width: auto;
+		text-transform: capitalize;
+		color: #becde3;
+		font-size: 1.4rem;
+		padding: 6px 15px;
+		background-color: transparent;
+		border: 2px solid #6c829d;
+		border-radius: 60px;
+		width: 76px;
+	}
+
+	&::after {
+		content: url("data:image/svg+xml,%0A%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.741416 0.406943C0.764639 0.383661 0.792226 0.36519 0.822599 0.352587C0.852971 0.339983 0.885532 0.333496 0.918416 0.333496C0.951299 0.333496 0.98386 0.339983 1.01423 0.352587C1.04461 0.36519 1.07219 0.383661 1.09542 0.406943L3.91842 3.23044L6.74142 0.406943C6.76466 0.383699 6.79225 0.365261 6.82262 0.352681C6.85299 0.340102 6.88554 0.333627 6.91842 0.333627C6.95129 0.333627 6.98384 0.340102 7.01421 0.352681C7.04458 0.365261 7.07217 0.383699 7.09542 0.406943C7.11866 0.430187 7.1371 0.457781 7.14968 0.488151C7.16226 0.518521 7.16873 0.551071 7.16873 0.583943C7.16873 0.616815 7.16226 0.649365 7.14968 0.679735C7.1371 0.710105 7.11866 0.737699 7.09542 0.760943L4.09542 3.76094C4.07219 3.78423 4.0446 3.8027 4.01423 3.8153C3.98386 3.8279 3.9513 3.83439 3.91842 3.83439C3.88553 3.83439 3.85297 3.8279 3.8226 3.8153C3.79223 3.8027 3.76464 3.78423 3.74142 3.76094L0.741416 0.760943C0.718134 0.73772 0.699663 0.710132 0.687059 0.67976C0.674456 0.649387 0.667969 0.616827 0.667969 0.583943C0.667969 0.551059 0.674456 0.518499 0.687059 0.488126C0.699663 0.457753 0.718134 0.430166 0.741416 0.406943V0.406943Z' fill='%23BECDE3'/%3E%3C/svg%3E%0A");
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 6px;
+		height: 12px;
+
+		@include lg {
+			content: none;
+		}
+	}
+
+	span {
+		display: none;
+
+		@include lg {
+			display: block;
+		}
+	}
+}

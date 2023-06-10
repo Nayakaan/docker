@@ -1,0 +1,108 @@
+.date-bar {
+	background: #1a212b;
+	display: flex;
+	align-items: center;
+
+	@include lg {
+		height: 70px;
+	}
+}
+
+.date-bar__list {
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	overflow-x: scroll;
+
+	@include xl {
+		overflow-x: visible;
+		max-width: 880px;
+	}
+}
+
+.date-bar__list-wrapper {
+	background: #1a212b;
+	padding: 15px 0 15px 20px;
+	display: flex;
+	align-items: center;
+	overflow-x: scroll;
+	position: relative;
+
+	@include lg {
+		overflow-x: hidden;
+		padding: 15px 50px;
+	}
+}
+
+.date-bar__btn {
+	color: #becde3;
+	background: #222a33;
+	border-radius: 8px;
+	font-size: 1.4rem;
+	display: inline-block;
+	padding: 10px 14px;
+	margin: 0 5px;
+	border: 0;
+	flex-shrink: 0;
+
+	&.active {
+		background: #16bdf9;
+		color: #fff;
+	}
+}
+
+.date-bar__prev-btn {
+	display: none;
+
+	@include lg {
+		display: block;
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='54' height='70' viewBox='0 0 54 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 0L46.0903 70H0L8.69054 0H54Z' fill='%23303B47'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30.5229 23.0154C30.5694 23.0947 30.6064 23.1889 30.6316 23.2927C30.6568 23.3964 30.6698 23.5075 30.6698 23.6198C30.6698 23.7321 30.6568 23.8433 30.6316 23.947C30.6064 24.0507 30.5694 24.1449 30.5229 24.2242L24.8759 33.8637L30.5229 43.5032C30.6167 43.6635 30.6695 43.8809 30.6695 44.1076C30.6695 44.3343 30.6167 44.5517 30.5229 44.712C30.429 44.8723 30.3016 44.9624 30.1689 44.9624C30.0361 44.9624 29.9087 44.8723 29.8149 44.712L23.8149 34.4681C23.7683 34.3888 23.7314 34.2946 23.7061 34.1909C23.6809 34.0872 23.668 33.976 23.668 33.8637C23.668 33.7515 23.6809 33.6403 23.7061 33.5366C23.7314 33.4328 23.7683 33.3386 23.8149 33.2593L29.8149 23.0154C29.8613 22.9359 29.9165 22.8729 29.9772 22.8298C30.038 22.7868 30.1031 22.7646 30.1689 22.7646C30.2346 22.7646 30.2998 22.7868 30.3605 22.8298C30.4212 22.8729 30.4764 22.9359 30.5229 23.0154V23.0154Z' fill='%23BECDE3'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		position: absolute;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		border: 0;
+		background-color: transparent;
+		width: 54px;
+		z-index: 2;
+	}
+}
+
+.date-bar__next-btn {
+	display: none;
+
+	@include lg {
+		display: block;
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='47' height='70' viewBox='0 0 47 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 0L46.0903 70H0L8.69054 0H54Z' fill='%23303B47'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.8149 23.0154C23.8613 22.9359 23.9165 22.8729 23.9772 22.8298C24.038 22.7868 24.1031 22.7646 24.1689 22.7646C24.2346 22.7646 24.2998 22.7868 24.3605 22.8298C24.4212 22.8729 24.4764 22.9359 24.5229 23.0154L30.5229 33.2593C30.5694 33.3386 30.6064 33.4328 30.6316 33.5366C30.6568 33.6403 30.6698 33.7514 30.6698 33.8637C30.6698 33.976 30.6568 34.0872 30.6316 34.1909C30.6064 34.2946 30.5694 34.3888 30.5229 34.4681L24.5229 44.712C24.429 44.8723 24.3016 44.9624 24.1689 44.9624C24.0361 44.9624 23.9087 44.8723 23.8149 44.712C23.721 44.5517 23.6682 44.3343 23.6682 44.1076C23.6682 43.8809 23.721 43.6635 23.8149 43.5032L29.4619 33.8637L23.8149 24.2242C23.7683 24.1449 23.7314 24.0507 23.7061 23.947C23.6809 23.8433 23.668 23.7321 23.668 23.6198C23.668 23.5075 23.6809 23.3964 23.7061 23.2927C23.7314 23.1889 23.7683 23.0947 23.8149 23.0154Z' fill='%23BECDE3'/%3E%3C/svg%3E%0A");
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border: 0;
+		background-color: transparent;
+		width: 47px;
+	}
+}
+
+.date-bar__select {
+	background: #303b47 !important;
+	min-width: 100px;
+
+	@include lg {
+		min-width: 200px;
+	}
+}
+
+.date-bar__select-wrapper {
+	background: linear-gradient(322.95deg, #222a33 10.88%, #2b343e 87.66%),
+		#26303a;
+	box-shadow: 5px 0px 24px rgba(0, 0, 0, 0.5);
+	padding: 15px;
+
+	@include lg {
+		height: 70px;
+		padding-right: 30px;
+	}
+}

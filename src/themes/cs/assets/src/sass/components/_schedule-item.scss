@@ -1,0 +1,21 @@
+.schedule-item {
+	display: grid;
+	padding-bottom: 15px;
+
+	@include lg {
+		padding-bottom: 20px;
+	}
+}
+
+.schedule-item__date {
+	background: #26303a;
+	border-radius: 8px;
+	text-align: center;
+	padding: 13px;
+	text-align: center;
+	color: #ffffff;
+
+	@include lg {
+		padding: 15px 10px;
+	}
+}
